@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/api', function() {
 	return 'Welcome to our api!';
 });
+
+Route::get('/api/posts', function() {
+	return 'Here is your all posts';
+});
