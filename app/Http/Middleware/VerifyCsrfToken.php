@@ -12,6 +12,8 @@ class VerifyCsrfToken extends BaseVerifier
      * @var array
      */
     protected $except = [
-        //
+        // for allowing use of DELETE, PUT etc. Delete this afterwards!!
+		// this will remove the middleware for authentication
+		'api/*', // this works as well
     ];
 }

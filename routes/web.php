@@ -11,6 +11,8 @@
 |
 */
 
+$prefix = '/api';
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -19,6 +21,13 @@ Route::get('/api', function() {
 	return 'Welcome to our api!';
 });
 
-Route::get('/api/posts', function() {
-	return 'Here is your all posts';
+// prefixing the the path to /api/*your path*
+Route::group(['prefix' => 'api'], function() {
+	
+	// Controller for handling the posts requests
+	Route::resource('posts', 'PostsController');	
+	
 });
+
+//Route::put('/api/posts/', 'PostsController@update');
+
