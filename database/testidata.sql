@@ -1,0 +1,9 @@
+INSERT INTO user (userRole, password, pictureURL, firstName, lastName, email, field, campus) VALUES
+(1, 'salasana1', 'jotain', 'Jenni', 'Rohunen', 'jenni.rohunen@gmail.com', 'Tieto- ja Viestintätekniikka', 'Dynamo'),
+(2, 'salasana', 'jotain', 'Riku', 'Laajala', 'rikunosoite@gmail.com', 'Tieto- ja Viestintätekniikka', 'Dynamo'),
+(3, 'salasana1', 'jotain', 'Jaana', 'Höpölöö', 'jaana@mail.com', 'Logistiikka', 'Rajakatu');
+
+INSERT INTO posts (userID, postType, tag, title, content) VALUES
+(1, 1, 'Kissa', 'Onko täälä kissojen rakastajia?', 'Maecenas vel efficitur diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque dictum convallis arcu, nec fermentum diam varius ut. Praesent eu sem mauris. Nulla aliquet iaculis orci non ornare. Quisque pellentesque quam non tortor feugiat facilisis. Morbi congue auctor egestas. Curabitur vitae erat at nibh dapibus bibendum.'),
+(2, 1, 'Koodit', 'Voisko joku vähän auttaa mua tässä ongelmassa', 'Maecenas vel efficitur diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque dictum convallis arcu, nec fermentum diam varius ut. Praesent eu sem mauris. Nulla aliquet iaculis orci non ornare. Quisque pellentesque quam non tortor feugiat facilisis. Morbi congue auctor egestas. Curabitur vitae erat at nibh dapibus bibendum.'),
+(3, 1, 'VainKariJutut', 'Dropshadow', 'Maecenas vel efficitur diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque dictum convallis arcu, nec fermentum diam varius ut. Praesent eu sem mauris. Nulla aliquet iaculis orci non ornare. Quisque pellentesque quam non tortor feugiat facilisis. Morbi congue auctor egestas. Curabitur vitae erat at nibh dapibus bibendum.');
