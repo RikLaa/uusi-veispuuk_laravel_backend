@@ -9,8 +9,8 @@ class PostsController extends Controller
 {
     public function index() {
 	//return 'here are all the posts';
-		//$posts = DB::select('select * from posts');
-		//return $posts;
+	$posts = DB::select('select * from posts');
+	return $posts;
 	}
 
 	public function show() {
