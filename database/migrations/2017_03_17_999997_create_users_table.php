@@ -14,6 +14,8 @@ class CreateUsersTable extends Migration
     public function up()
     {
         if (Schema::hasTable('users')) {
+            Schema::drop('comments');
+            Schema::drop('posts');
             Schema::drop('users');
         }
 

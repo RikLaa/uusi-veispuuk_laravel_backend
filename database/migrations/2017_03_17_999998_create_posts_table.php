@@ -13,21 +13,18 @@ class CreatePostsTable extends Migration
      */
      public function up()
     {
-        if (Schema::hasTable('posts')) {
-            Schema::drop('posts');
-        }
-
+        
         Schema::create('posts', function(Blueprint $table) {
             $table->increments('postID');
             $table->integer('userID')->unsigned();
-            $table->foreign('userID')->references('id')->on('users');
+            $table->foreign('userID')->references('userID')->on('users');
             $table->integer('postType');
             $table->string('pictureURL', 60);
             $table->string('tag', 45);
             $table->string('title', 800);
             $table->string('content', 3000);
-            $table->timestamp('created_at')->default('CURRENT_TIMESTAMP');
-            $table->timestamp('updated_at')->default('CURRENT_TIMESTAMP');
+            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
     }
 
