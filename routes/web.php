@@ -26,6 +26,9 @@ Route::group(['prefix' => 'api'], function() {
 	
 	// Controller for handling the posts requests
 	Route::resource('posts', 'PostsController');	
+    
+    // Controller for handling the user requests
+	Route::resource('user', 'UserController');	
 	
 });
 
