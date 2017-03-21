@@ -22,10 +22,11 @@ class CreateUsersTable extends Migration
         Schema::create('users', function(Blueprint $table) {
             $table->increments('userID');
             $table->integer('userRole');
-            $table->string('password', 100);
+            $table->string('passwordSalt', 100);
+            $table->string('passwordHash', 512);
             $table->string('pictureURL', 300);
             $table->string('firstName', 50);
-            $table->string('lastName', 60); 
+            $table->string('lastName', 60);
             $table->string('email', 60);
             $table->string('field', 45);
             $table->string('campus', 45);
