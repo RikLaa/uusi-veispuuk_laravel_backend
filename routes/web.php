@@ -34,3 +34,7 @@ Route::get('/testpage', function(){
   return view('testpage');
 });
 //Route::put('/api/posts/', 'PostsController@update');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
