@@ -81,13 +81,6 @@
                 <div class="title m-b-md">
                     Borhan was here! :)
                 </div>
-                <!-- <div class="title m-b-md">
-                  @foreach ($posts as $post)
-                    <ul>
-                      <li>{{ $post->content }}</li>
-                    </ul>
-                  @endforeach
-                </div> -->
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
