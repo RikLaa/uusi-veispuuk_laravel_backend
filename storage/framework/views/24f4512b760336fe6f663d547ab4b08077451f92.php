@@ -81,13 +81,13 @@
                 <div class="title m-b-md">
                     Borhan was here! :)
                 </div>
-                <div class="title m-b-md">
+                <!-- <div class="title m-b-md">
                   <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <ul>
                       <li><?php echo e($post->content); ?></li>
                     </ul>
                   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-                </div>
+                </div> -->
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
