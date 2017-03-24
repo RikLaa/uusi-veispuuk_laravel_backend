@@ -23,11 +23,14 @@ Route::get('/api', function() {
 
 // prefixing the the path to /api/*your path*
 Route::group(['prefix' => 'api'], function() {
-	
+
 	// Controller for handling the posts requests
-	Route::resource('posts', 'PostsController');	
-	
+	Route::resource('posts', 'PostsController');
+
 });
 
+//some practice
+Route::get('/testpage', function(){
+  return view('testpage');
+});
 //Route::put('/api/posts/', 'PostsController@update');
-
