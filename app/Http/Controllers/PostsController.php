@@ -28,9 +28,9 @@ class PostsController extends Controller
 	//create a new post
     //GET api/posts/create
 	public function create() {
-			$new = DB::select("INSERT INTO posts (userID, postType, tag, title, content) VALUES
+            $new = DB::select("INSERT INTO posts (userID, postType, tag, title, content) VALUES
             (1, 1, 'TAAAG', 'TITLE TITLE', 'CONTENT CONTENT')");
-	           return 
+               return 
                    'I have created a brand new post!';
                    $new;
 	}

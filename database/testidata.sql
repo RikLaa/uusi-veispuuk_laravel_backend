@@ -1,4 +1,4 @@
-INSERT INTO user (userRole, password, pictureURL, firstName, lastName, email, field, campus) VALUES
+INSERT INTO users (userRole, password, pictureURL, firstName, lastName, email, field, campus) VALUES
 (1, 'salasana1', 'jotain', 'Jenni', 'Rohunen', 'jenni.rohunen@gmail.com', 'Tieto- ja Viestintätekniikka', 'Dynamo'),
 (2, 'salasana', 'jotain', 'Riku', 'Laajala', 'rikunosoite@gmail.com', 'Tieto- ja Viestintätekniikka', 'Dynamo'),
 (3, 'salasana1', 'jotain', 'Jaana', 'Höpölöö', 'jaana@mail.com', 'Logistiikka', 'Rajakatu');
