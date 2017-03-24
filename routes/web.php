@@ -1,5 +1,7 @@
 <?php
 
+use App\Post;
+use App\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +36,21 @@ Route::get('/testpage', function(){
   return view('testpage');
 });
 //Route::put('/api/posts/', 'PostsController@update');
+
+Auth::routes();
+
+Route::get('/posts', function(){
+  //$posts = DB::table('posts')->latest()->get();
+  $posts = App\Post::all();
+
+  return view('posts.index', compact('tasks'));
+});
+
+Route::get('/posts/{post}', function($tag){
+  //$post = DB::table('posts')->find($tag);
+  $post = App\Task::find($id);
+
+  return view('posts.show', compact('task'));
+});
+
+Route::get('/home', 'HomeController@index');
