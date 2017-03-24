@@ -2028,3 +2028,55 @@ Stack trace:
 #15 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(123): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #16 /var/www/laravel/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #17 {main}  
+[2017-03-24 07:31:50] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to undefined method Illuminate\Database\Schema\Blueprint::varchar() in /var/www/laravel/database/migrations/2017_03_17_999997_create_users_table.php:25
+Stack trace:
+#0 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(163): CreateUsersTable->{closure}(Object(Illuminate\Database\Schema\Blueprint))
+#1 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Support/helpers.php(878): Illuminate\Database\Schema\Builder->Illuminate\Database\Schema\{closure}(Object(Illuminate\Database\Schema\Blueprint))
+#2 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Database/Schema/Builder.php(164): tap(Object(Illuminate\Database\Schema\Blueprint), Object(Closure))
+#3 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(221): Illuminate\Database\Schema\Builder->create('users', Object(Closure))
+#4 /var/www/laravel/database/migrations/2017_03_17_999997_create_users_table.php(32): Illuminate\Support\Facades\Facade::__callStatic('create', Array)
+#5 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(348): CreateUsersTable->up()
+#6 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(353): Illuminate\Database\Migrations\Migrator->Illuminate\Database\Migrations\{closure}()
+#7 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(175): Illuminate\Database\Migrations\Migrator->runMigration(Object(CreateUsersTable), 'up')
+#8 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(146): Illuminate\Database\Migrations\Migrator->runUp('/var/www/larave...', 1, false)
+#9 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Database/Migrations/Migrator.php(95): Illuminate\Database\Migrations\Migrator->runPending(Array, Array)
+#10 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/MigrateCommand.php(69): Illuminate\Database\Migrations\Migrator->run(Array, Array)
+#11 [internal function]: Illuminate\Database\Console\Migrations\MigrateCommand->fire()
+#12 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#13 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#14 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#15 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(524): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#16 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#17 /var/www/laravel/vendor/symfony/console/Command/Command.php(265): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArrayInput), Object(Illuminate\Console\OutputStyle))
+#18 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArrayInput), Object(Illuminate\Console\OutputStyle))
+#19 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(197): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArrayInput), Object(Illuminate\Console\OutputStyle))
+#20 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Database/Console/Migrations/RefreshCommand.php(64): Illuminate\Console\Command->call('migrate', Array)
+#21 [internal function]: Illuminate\Database\Console\Migrations\RefreshCommand->fire()
+#22 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(29): call_user_func_array(Array, Array)
+#23 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(87): Illuminate\Container\BoundMethod::Illuminate\Container\{closure}()
+#24 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(31): Illuminate\Container\BoundMethod::callBoundMethod(Object(Illuminate\Foundation\Application), Array, Object(Closure))
+#25 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Container/Container.php(524): Illuminate\Container\BoundMethod::call(Object(Illuminate\Foundation\Application), Array, Array, NULL)
+#26 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Illuminate\Container\Container->call(Array)
+#27 /var/www/laravel/vendor/symfony/console/Command/Command.php(265): Illuminate\Console\Command->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#28 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Console/Command.php(167): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Illuminate\Console\OutputStyle))
+#29 /var/www/laravel/vendor/symfony/console/Application.php(826): Illuminate\Console\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#30 /var/www/laravel/vendor/symfony/console/Application.php(189): Symfony\Component\Console\Application->doRunCommand(Object(Illuminate\Database\Console\Migrations\RefreshCommand), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#31 /var/www/laravel/vendor/symfony/console/Application.php(120): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#32 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(123): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#33 /var/www/laravel/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#34 {main}  
+[2017-03-24 07:34:02] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "migrate:resetls" is not defined.
+
+Did you mean one of these?
+    migrate:reset
+    migrate:install
+    migrate:refresh
+    migrate:status
+    migrate
+    migrate:rollback in /var/www/laravel/vendor/symfony/console/Application.php:545
+Stack trace:
+#0 /var/www/laravel/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->find('migrate:resetls')
+#1 /var/www/laravel/vendor/symfony/console/Application.php(120): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(123): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/laravel/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
