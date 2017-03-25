@@ -21,19 +21,28 @@ class PostsController extends Controller
         where userID = 1');
         return $onepost;
 	}
+
+    public function store(Request $request) {
+        $data = $request->input('phptitle');
+        return $data;
+
+    }
 	// DELETE /api/posts/1
 	public function destroy() {
 		return 'I have deleted your post now';
 	}
 	//create a new post
     //GET api/posts/create
-	public function create() {
-            $new = DB::select("INSERT INTO posts (userID, postType, tag, title, content) VALUES
-            (1, 1, 'TAAAG', 'TITLE TITLE', 'CONTENT CONTENT')");
-               return 
-                   'I have created a brand new post!';
-                   $new;
-	}
+	public function create(Request $request) {
+        // $data = $request->json()->all();
+        // $title = $data;
+        // return $title;
+
+
+    }
+
+
+
 	
     ///PUT api/posts/1
 	public function update() {
