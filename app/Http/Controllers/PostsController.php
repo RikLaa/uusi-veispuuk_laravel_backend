@@ -23,8 +23,9 @@ class PostsController extends Controller
 	}
 
     public function store(Request $request) {
-        $data = $request->input('phptitle');
-        return $data;
+        $data = $request->json()->all();
+        $title = $data['phptitle'];
+        return $title;
 
     }
 	// DELETE /api/posts/1
@@ -34,9 +35,10 @@ class PostsController extends Controller
 	//create a new post
     //GET api/posts/create
 	public function create(Request $request) {
-        // $data = $request->json()->all();
-        // $title = $data;
-        // return $title;
+         $data = $request->all();
+         $title = $data['title'];
+
+         return $title;
 
 
     }
