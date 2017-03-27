@@ -8,6 +8,6 @@ class Post extends Model
 {
     public static function byTag()
     {
-      return static::where('tag', '#test')->get();
+      return static::where('tag', '#work')->get();
     }
 }

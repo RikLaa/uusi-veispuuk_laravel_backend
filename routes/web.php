@@ -43,14 +43,14 @@ Route::get('/posts', function(){
   //$posts = DB::table('posts')->latest()->get();
   $posts = App\Post::all();
 
-  return view('posts.index', compact('tasks'));
+  return view('posts.index', compact('posts'));
 });
 
-Route::get('/posts/{post}', function($tag){
+Route::get('/posts/{tag}', function($tag){
   //$post = DB::table('posts')->find($tag);
-  $post = App\Post::find($id);
+  $post = App\Post::find($tag);
 
-  return view('posts.show', compact('post'));
+  return view('posts.show', compact('tag'));
 });
 
 Route::get('/home', 'HomeController@index');
