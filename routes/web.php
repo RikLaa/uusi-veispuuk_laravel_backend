@@ -48,9 +48,9 @@ Route::get('/posts', function(){
 
 Route::get('/posts/{post}', function($tag){
   //$post = DB::table('posts')->find($tag);
-  $post = App\Task::find($id);
+  $post = App\Post::find($id);
 
-  return view('posts.show', compact('task'));
+  return view('posts.show', compact('post'));
 });
 
 Route::get('/home', 'HomeController@index');
