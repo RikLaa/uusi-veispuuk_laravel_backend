@@ -36,3 +36,7 @@ Route::get('/posts/{tag}', function($tag){
 
 Auth::routes();
 Route::get('/home', 'HomeController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
