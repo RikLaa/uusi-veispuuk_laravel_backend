@@ -2,16 +2,7 @@
 
 use App\Post;
 use App\User;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 $prefix = '/api';
 
@@ -31,26 +22,17 @@ Route::group(['prefix' => 'api'], function() {
 
 });
 
-//some practice
-Route::get('/testpage', function(){
-  return view('testpage');
-});
-//Route::put('/api/posts/', 'PostsController@update');
-
-Auth::routes();
-
 Route::get('/posts', function(){
-  //$posts = DB::table('posts')->latest()->get();
+  //$posts = DB::table('posts')->get();
   $posts = App\Post::all();
-
   return view('posts.index', compact('posts'));
 });
 
 Route::get('/posts/{tag}', function($tag){
-  //$post = DB::table('posts')->find($tag);
   $post = App\Post::find($tag);
-
-  return view('posts.show', compact('tag'));
+  return view('posts.show', compact('post'));
 });
 
+
+Auth::routes();
 Route::get('/home', 'HomeController@index');
