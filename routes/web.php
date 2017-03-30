@@ -17,14 +17,18 @@ Route::get('/api', function() {
 // prefixing the the path to /api/*your path*
 Route::group(['prefix' => 'api'], function() {
 
-	Route::resource('posts', 'PostsController');	
-    
+	Route::resource('posts', 'PostsController');
+
     // Controller for handling the user requests
-	Route::resource('user', 'UserController');	
-	
+	Route::resource('user', 'UserController');
+
 
 // EVERY API CALL/PATH BEFORE THIS LINE!
 });
 
 
 Route::get('/home', 'HomeController@index');
+
+// Authentication routes
+Route::get('/register', 'RegistrationController@create');
+Route::('/login', 'SessionsController@Create');
