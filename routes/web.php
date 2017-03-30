@@ -22,13 +22,16 @@ Route::group(['prefix' => 'api'], function() {
     // Controller for handling the user requests
 	Route::resource('user', 'UserController');
 
+  // Authentication routes
+  Route::get('/register', 'RegistrationController@create');
+  Route::post('/register', 'RegistrationController@store');
+
+  Route::('/login', 'SessionsController@Create');
+  Route::('/logout', 'SessionsController@destroy');
+
 
 // EVERY API CALL/PATH BEFORE THIS LINE!
 });
 
 
 Route::get('/home', 'HomeController@index');
-
-// Authentication routes
-Route::get('/register', 'RegistrationController@create');
-Route::('/login', 'SessionsController@Create');
