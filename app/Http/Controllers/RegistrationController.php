@@ -3,17 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RegistrationController extends Controller
 {
     public function create()
     {
-      return view('sessions.create');
+      //return view('sessions.create');
     }
-}
 
-public function store(){
 
+public function store (Request $request){
+
+
+/*
   // validation
   $this -> validate(request(), [
 
@@ -25,9 +28,28 @@ public function store(){
     'campus' =>'required',
 
   ]);
+  */
+    $user = $request->all();
+    $user['userRole'] = 1;
 
+    /*$new = DB::select("insert into users (userRole, password, pictureURL, firstName, lastName, email, field, campus) values
+    (1, 'salasana', '/var/pictures', 'etunimi', 'sukunimi', 'nimi@gmail.com', 'ict', 'dynamo')");*/
   // create and save the user
-$user = User::create(request(['password', 'firstName', 'lastName', 'email', 'field', 'campus']));
+ $id = DB::table('users')->insertGetId([
+
+      'userRole' => 1,
+      'password' => $user['password'],
+      'pictureURL' => '/var/www/pictures',
+      'firstName' => $user['firstName'],
+      'lastName' => $user['lastName'],
+      'email' => $user['email'],
+     'field' => $user['field'],
+     'campus' => $user['campus']
+
+]);
+  //$user = save();
+
+return $id;
 
 
 /*
@@ -45,5 +67,5 @@ return redirect()->home();
 	}
 
 */
-
+}
 }
