@@ -16,7 +16,7 @@ class RegistrationController extends Controller
 public function store (Request $request){
 
 
-/*
+
   // validation
   $this -> validate(request(), [
 
@@ -28,7 +28,7 @@ public function store (Request $request){
     'campus' =>'required',
 
   ]);
-  */
+  
     $user = $request->all();
     $user['userRole'] = 1;
 
@@ -47,9 +47,16 @@ public function store (Request $request){
      'campus' => $user['campus']
 
 ]);
-  //$user = save();
 
-return $id;
+if (is_int($id)) {
+    
+    return 'true';
+    
+}else{
+    
+    return 'false';
+}
+   // return $id;
 
 
 /*
