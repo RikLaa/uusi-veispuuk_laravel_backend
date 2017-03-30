@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
+
+
 class PostsController extends Controller
 {
     public function index() {
@@ -57,8 +59,13 @@ class PostsController extends Controller
 	public function create(Request $request) {
          $data = $request->all();
          $title = $data['title'];
-
-         return $title;
+        $content = $data['content'];
+        $tag = $data['tag'];
+       
+        
+      $new = DB::select("INSERT INTO posts (userID, postType, tag, title, content) VALUES
+        (3, 1, '$tag', '$title', '$content')");
+	       return $new;
 
 
     }

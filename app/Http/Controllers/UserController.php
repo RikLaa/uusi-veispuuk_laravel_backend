@@ -22,9 +22,10 @@ class UserController extends Controller
 	}
 	//create a new user
     public function create() {
-			$new = DB::select("INSERT INTO users (userRole, pictureURL, firstName, lastName, email, field, campus) VALUES
-            (3, 'jotainURL', 'Kirsi', 'Kernel', 'Kirsi@gmail.com', 'Liiketalous', 'Rajakatu')");
-	        return $new;
+      
+			$new = DB::select("insert into users (userRole, password, pictureURL, firstName, lastName, email, field, campus) values
+(1, 'salasana', '/var/pictures', 'etunimi', 'sukunimi', 'nimi@gmail.com', 'ict', 'dynamo')");
+	        return 'i created new user';
 	}
-    
+
 }
