@@ -26,12 +26,16 @@ Route::group(['prefix' => 'api'], function() {
   //Route::get('/register', 'RegistrationController@create');
   Route::post('/register', 'RegistrationController@store');
 
-  //Route::('/login', 'SessionsController@Create');
+  Route::post('/login', 'SessionsController@authenticate');
   //Route::('/logout', 'SessionsController@destroy');
 
 
 // EVERY API CALL/PATH BEFORE THIS LINE!
 });
 
+
+Route::get('/home', 'HomeController@index');
+
+Auth::routes();
 
 Route::get('/home', 'HomeController@index');

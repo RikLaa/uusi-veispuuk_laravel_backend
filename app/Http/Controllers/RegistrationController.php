@@ -38,7 +38,7 @@ class RegistrationController extends Controller
         $id = DB::table('users')->insertGetId([
 
             'userRole' => 1,
-            'password' => $user['password'],
+            'password' => bcrypt($user['password']),
             'pictureURL' => '/var/www/pictures',
             'firstName' => $user['firstName'],
             'lastName' => $user['lastName'],
