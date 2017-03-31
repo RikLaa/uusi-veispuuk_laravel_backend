@@ -13624,3 +13624,28 @@ Stack trace:
 #54 /var/www/laravel/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #55 {main}  
 >>>>>>> abc3f287c25d3da96bcd7283e34a8d6b04932358
+[2017-03-31 06:17:00] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "make" is not defined.
+
+Did you mean one of these?
+    make:notification
+    make:controller
+    make:middleware
+    make:migration
+    make:listener
+    make:provider
+    make:command
+    make:request
+    make:policy
+    make:seeder
+    make:event
+    make:model
+    make:auth
+    make:mail
+    make:test
+    make:job in /var/www/laravel/vendor/symfony/console/Application.php:545
+Stack trace:
+#0 /var/www/laravel/vendor/symfony/console/Application.php(186): Symfony\Component\Console\Application->find('make')
+#1 /var/www/laravel/vendor/symfony/console/Application.php(120): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /var/www/laravel/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(123): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /var/www/laravel/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
