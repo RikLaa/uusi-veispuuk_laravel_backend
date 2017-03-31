@@ -10,10 +10,30 @@ use Illuminate\Http\Request;
 class PostsController extends Controller
 {
     public function index() {
-	//return 'here are all the posts';
-	$posts = DB::select('select * from posts');
-	return $posts;
-	}
+        //return 'here are all the posts';
+        $posts = DB::select('select * from posts');
+        $comments = DB::select('select * from comments');
+
+        $allPosts = array();
+
+        // Loop through all posts
+        foreach ($posts as $post) {
+            // Create array for comments, inside post-object
+            $post->comments = array();
+
+            // loop through comments and append comments to the commenst array if postID matches
+            foreach ($comments as $comment) {
+                if ($comment->postID == $post->postID) {
+                    array_push($post->comments, $comment);
+                }
+            }
+
+            // append the ready post-object to the allPosts array
+            array_push($allPosts, $post);
+        }
+
+        return $allPosts;
+    }
 
     //show posts from one user
     ///GET api/posts/1
