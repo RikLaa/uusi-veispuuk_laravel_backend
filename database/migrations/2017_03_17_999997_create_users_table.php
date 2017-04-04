@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->increments('userID');
             $table->integer('userRole');
             
-            $table->binary('pictureURL');
+          //  $table->binary('pictureURL');
             $table->string('firstName', 50);
             $table->string('lastName', 60);
             $table->string('password', 512);
@@ -31,6 +31,7 @@ class CreateUsersTable extends Migration
             $table->string('field', 45);
             $table->string('campus', 45);
         });
+		DB::statement("ALTER TABLE users ADD pictureURL LONGBLOB");
     }
 
     /**

@@ -19,13 +19,16 @@ class CreatePostsTable extends Migration
             $table->integer('userID')->unsigned();
             $table->foreign('userID')->references('userID')->on('users');
             $table->integer('postType');
-            $table->binary('pictureURL')->nullable();
+          //  $table->binary('pictureURL')->nullable();
             $table->string('tag', 45);
             $table->string('title', 800);
             $table->string('content', 3000);
             $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
             $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
         });
+		
+
+DB::statement("ALTER TABLE posts ADD pictureURL LONGBLOB");
     }
 
     /**

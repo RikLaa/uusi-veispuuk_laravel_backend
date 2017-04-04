@@ -61,7 +61,7 @@ class PostsController extends Controller
          $data = $request->all();
          $title = $data['title'];
         $content = $data['content'];
-        $tag = $data['tag'];
+        $tag = $data['tag.value'];
        
         
       $new = DB::select("INSERT INTO posts (userID, postType, tag, title, content) VALUES
@@ -74,14 +74,13 @@ class PostsController extends Controller
     //post metodi api/posts/image
 	public function createImage(Request $request) {
         $data = $request->all();
-        $image = $data['image'];
-        $tag = $data['tag'];
+       $image = $data['image'];
+       $tag = $data['tag'];
        
         
-   /*   $new = DB::select("INSERT INTO posts (userID, postType, pictureURL, tag, title, content) VALUES
-        (3, 2, '$image', '$tag', ' ', ' ')"); */
-        return $request;
-	    //   return $new;
+    $new = DB::select("INSERT INTO posts (userID, postType, pictureURL, tag, title, content) VALUES (3, 2, '$image', '$tag', ' ', ' ')");
+   //  return $image;
+	     return $new;
     
 
     }
