@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
+   /* public function __construct{
+        $this->middleware('checklogin');
+    } */
+    
     public function index() {
         //return 'here are all the posts';
         $posts = DB::select('select * from posts');

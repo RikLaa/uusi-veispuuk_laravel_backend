@@ -2,6 +2,7 @@
 
 use App\Post;
 use App\User;
+//use App\Http\Middleware\CheckLogin;
 
 
 $prefix = '/api';
@@ -40,3 +41,4 @@ Route::get('/home', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+

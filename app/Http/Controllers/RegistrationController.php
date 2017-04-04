@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Session;
 
 class RegistrationController extends Controller
 {
@@ -47,8 +48,12 @@ class RegistrationController extends Controller
             'campus' => $user['campus']
 
         ]);
-
+        
+        
         if (is_int($id)) {
+            
+            //$request->session()->put('user_id', $id);
+            //$request->session()->put('user_id', $id);
 
             return 'true';
 
