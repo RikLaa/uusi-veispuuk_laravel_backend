@@ -32,7 +32,7 @@ class PostsController extends Controller
             array_push($allPosts, $post);
         }
 
-        return $allPosts;
+        return array_reverse($allPosts);
     }
 
     //show posts from one user
