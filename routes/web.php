@@ -23,14 +23,14 @@ Route::group(['prefix' => 'api'], function() {
 
     // Controller for handling the user requests
 	Route::resource('user', 'UserController');
+	Route::group(['middleware' => 'checklogin'], function(){
+	// Authentication routes
+	//Route::get('/register', 'RegistrationController@create');
+	Route::post('/register', 'RegistrationController@store');
 
-  // Authentication routes
-  //Route::get('/register', 'RegistrationController@create');
-  Route::post('/register', 'RegistrationController@store');
-
-  Route::post('/login', 'SessionsController@authenticate');
-  //Route::('/logout', 'SessionsController@destroy');
-
+	Route::post('/login', 'SessionsController@authenticate');
+	//Route::('/logout', 'SessionsController@destroy');
+	});
 
 // EVERY API CALL/PATH BEFORE THIS LINE!
 });

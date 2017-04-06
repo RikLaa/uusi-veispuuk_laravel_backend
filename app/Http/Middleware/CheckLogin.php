@@ -16,7 +16,7 @@ class CheckLogin
     public function handle($request, Closure $next)
     {
         
-        if(session()->has('email')) {
+        if($request->session()->has('email')) {
             return $next($request);    
         } else echo 'asdöflk';
         
