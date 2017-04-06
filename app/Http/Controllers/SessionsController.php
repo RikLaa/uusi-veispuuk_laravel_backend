@@ -37,8 +37,8 @@ class SessionsController extends Controller
 
       if (Auth::attempt(['email' => $email, 'password' => $password])) {
           
-          Session::set('email', $email);
-          //$request->session()->put('email', $email);
+          //Session::set('email', $email);
+          $request->session()->set('email', $email);
           
           
           return 'true';
