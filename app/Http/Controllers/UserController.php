@@ -38,7 +38,7 @@ class UserController extends Controller
     public function show() {
 		// return 'here is your one and only user';
         $oneuser = DB::select('select *
-        from users
+        from users where userID = 5
         ');
         return $oneuser;
 	}
