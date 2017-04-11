@@ -17,7 +17,7 @@ class CheckLogin
     {
         
         // if($request->session()->get('email') !== null)
-        if($request->session()->has('email')) {
+        if($request->session()->exists('email')) {
             
             return $next($request);
             
