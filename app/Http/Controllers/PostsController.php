@@ -11,7 +11,7 @@ class PostsController extends Controller
 {
     public function index() {
         //return 'here are all the posts';
-        $posts = DB::select('select * from posts');
+        $posts = DB::select('select * from posts ORDER BY postID DESC');
         $comments = DB::select('select * from comments');
 
         $allPosts = array();
@@ -32,7 +32,7 @@ class PostsController extends Controller
             array_push($allPosts, $post);
         }
 
-        return array_reverse($allPosts);
+        return $allPosts;
     }
 
     //show posts from one user

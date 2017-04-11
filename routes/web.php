@@ -32,6 +32,8 @@ Route::group(['prefix' => 'api'], function() {
         Route::post('posts/image', 'PostsController@createImage');
         Route::resource('comments', 'CommentsController');
 
+        Route::resource('search', 'SearchController');
+
         // Controller for handling the user requests
 	   Route::resource('user', 'UserController');
 	

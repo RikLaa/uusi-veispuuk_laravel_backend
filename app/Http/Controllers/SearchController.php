@@ -20,6 +20,7 @@ class SearchController extends Controller
         // posts where tag matches
         $posts = DB::table('posts')
             ->where('tag', 'like', $tag)
+            ->orderBy('postID', 'desc')
             ->get();
 
         // array to be returned
@@ -33,7 +34,8 @@ class SearchController extends Controller
                 ->where('postID', $post->postID) 
                 ->get();
 
-            array_push($post->comments, $comments);
+            //array_push($post->comments, $comments);
+            $post->comments = $comments;
 
         }
 
