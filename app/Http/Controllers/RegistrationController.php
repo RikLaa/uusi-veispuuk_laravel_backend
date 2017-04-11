@@ -39,7 +39,7 @@ class RegistrationController extends Controller
 
             'userRole' => 1,
             'password' => bcrypt($user['password']),
-            'pictureURL' => '/var/www/pictures',
+            'pictureURL' => $user['image'],
             'firstName' => $user['firstName'],
             'lastName' => $user['lastName'],
             'email' => $user['email'],

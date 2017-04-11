@@ -9,7 +9,7 @@ class UserController extends Controller
 {
     //yhden käyttäjän kaikki postaukset
     public function index() {
-{       $posts = DB::select('select * from posts where userID = 3 LIMIT 6');
+{       $posts = DB::select('select * from posts where userID = 3  ORDER BY postID DESC LIMIT 6');
         $comments = DB::select('select * from comments');
 
         $allPosts = array();
@@ -30,16 +30,16 @@ class UserController extends Controller
             array_push($allPosts, $post);
         }
 
-        return array_reverse($allPosts);
+       return $allPosts;
     }
         
 	}
     //show user profile info
     public function show() {
 		// return 'here is your one and only user';
-        $oneuser = DB::select('select userID, pictureURL, firstName, lastName
+        $oneuser = DB::select('select *
         from users
-        where userID = 1');
+        ');
         return $oneuser;
 	}
     
