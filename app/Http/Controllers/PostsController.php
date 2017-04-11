@@ -61,7 +61,7 @@ class PostsController extends Controller
          $data = $request->all();
          $title = $data['title'];
         $content = $data['content'];
-        $tag = $data['tag.value'];
+        $tag = $data['tag'];
        
         
       $new = DB::select("INSERT INTO posts (userID, postType, tag, title, content) VALUES
