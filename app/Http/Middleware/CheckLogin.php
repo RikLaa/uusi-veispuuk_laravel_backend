@@ -23,8 +23,8 @@ class CheckLogin
             
         } else {
             
-            //return false;
-            echo 'not allowed';
+            return 'false';
+            //echo 'not allowed';
             
         }
         

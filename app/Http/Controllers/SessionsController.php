@@ -43,10 +43,10 @@ class SessionsController extends Controller
          if(password_verify($password, $checkPassword)){
             
               session(['email' => $email]);
-              echo 'login ok, session ok';
+              return 'true';
           }else{
               
-              echo 'false';
+              return 'false';
           }
           
           
