@@ -16,9 +16,16 @@ class CheckLogin
     public function handle($request, Closure $next)
     {
         
+        // if($request->session()->get('email') !== null)
         if($request->session()->has('email')) {
-            return $next($request);    
-        } else echo 'asdöflk';
+            
+            return $next($request);
+            
+        } else {
+            
+            return redirect('/api/login');
+            
+        }
         
         
         

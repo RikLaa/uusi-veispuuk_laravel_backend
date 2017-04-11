@@ -17,25 +17,31 @@ Route::get('/api', function() {
 
 // prefixing the the path to /api/*your path*
 Route::group(['prefix' => 'api'], function() {
-
-	Route::resource('posts', 'PostsController');
-    Route::post('posts/image', 'PostsController@createImage');
-
-    // Controller for handling the user requests
-	Route::resource('user', 'UserController');
-	
-
-// EVERY API CALL/PATH BEFORE THIS LINE!
-});
-
-Route::group(['middleware' => 'checklogin'], function(){
-	// Authentication routes
+    
+    // Authentication routes
 	//Route::get('/register', 'RegistrationController@create');
 	Route::post('/register', 'RegistrationController@store');
 
 	Route::post('/login', 'SessionsController@authenticate');
 	//Route::('/logout', 'SessionsController@destroy');
+
+	
+    
+    Route::group(['middleware' => 'checklogin'], function(){
+        
+        Route::resource('posts', 'PostsController');
+        Route::post('posts/image', 'PostsController@createImage');
+
+        // Controller for handling the user requests
+	   Route::resource('user', 'UserController');
+	
 	});
+	
+
+// EVERY API CALL/PATH BEFORE THIS LINE!
+});
+
+
 
 Route::get('/home', 'HomeController@index');
 

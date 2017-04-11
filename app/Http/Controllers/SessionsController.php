@@ -38,13 +38,31 @@ class SessionsController extends Controller
       if (Auth::attempt(['email' => $email, 'password' => $password])) {
           
           //Session::set('email', $email);
-          $request->session()->set('email', $email);
+          $checkSession = $request->session()->set('email', $email);
+          
+          if ($checkSession) {
+              
+              //return redirect('/api/posts');
+              return true;
+              
+          } else  {
+              
+              //return redirect('/api/login');
+              return false;
+              
+          }
           
           
-          return 'true';
-      } else {
-          return 'false';
+          
       }
 
   }
+    
+    
+    public function logout(Request $request){
+        
+        $request->session()->flush();
+        return redirect('/api/login');
+        
+    }
 }
