@@ -20,8 +20,13 @@ Route::group(['prefix' => 'api'], function() {
 	Route::resource('posts', 'PostsController');
     Route::post('posts/image', 'PostsController@createImage');
 
+    Route::resource('comments', 'CommentsController');
+
     // Controller for handling the user requests
 	Route::resource('user', 'UserController');
+
+    // Search routes
+    Route::resource('search', 'SearchController');
 
   // Authentication routes
   //Route::get('/register', 'RegistrationController@create');

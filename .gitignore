@@ -23,4 +23,4 @@ Homestead.json
 .rocketeer/
 
 # End of https://www.gitignore.io/api/laravel
-
+public/deploy.php
