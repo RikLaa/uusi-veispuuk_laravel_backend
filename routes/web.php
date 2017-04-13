@@ -22,7 +22,7 @@ Route::group(['prefix' => 'api'], function() {
 	Route::post('/register', 'RegistrationController@store');
 
 	Route::post('/login', 'SessionsController@authenticate');
-	//Route::('/logout', 'SessionsController@destroy');
+    Route::post('/logout', 'SessionsController@logout');
 
 	
     

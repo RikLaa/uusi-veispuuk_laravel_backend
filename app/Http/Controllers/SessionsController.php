@@ -88,8 +88,10 @@ class SessionsController extends Controller
   }
     public function logout(Request $request){
         
+        //Auth::logout();
+        //return $request;
         $request->session()->flush();
-        return redirect('/api/login');
+        //return redirect('/api/login');
         
     }
 }
