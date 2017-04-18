@@ -16,7 +16,7 @@ Route::get('/api', function() {
 
 // prefixing the the path to /api/*your path*
 Route::group(['prefix' => 'api'], function() {
-    
+    Route::get('user/testi', 'UserController@getCorrectID');
     // Authentication routes
 	//Route::get('/register', 'RegistrationController@create');
 	Route::post('/register', 'RegistrationController@store');
@@ -38,6 +38,8 @@ Route::group(['prefix' => 'api'], function() {
 	   Route::resource('user', 'UserController');
 	
 	});
+    
+    
 	
 
 // EVERY API CALL/PATH BEFORE THIS LINE!

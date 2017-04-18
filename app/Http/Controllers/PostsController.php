@@ -9,6 +9,15 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
+    
+        public function getCorrectID() {
+        $sessionEmail = session('email');
+         $userID = DB::select("select userID
+        from users where email = '$sessionEmail' "); 
+        return $userID[0]->userID;      
+    }
+    
+    
     public function index() {
         //return 'here are all the posts';
         $posts = DB::select('select * from posts ORDER BY postID DESC');
@@ -58,6 +67,7 @@ class PostsController extends Controller
 	//create a new post
     //GET api/posts/create
 	public function create(Request $request) {
+         $userID = $this->getCorrectID();
          $data = $request->all();
          $title = $data['title'];
         $content = $data['content'];
@@ -65,7 +75,7 @@ class PostsController extends Controller
        
         
       $new = DB::select("INSERT INTO posts (userID, postType, tag, title, content) VALUES
-        (3, 1, '$tag', '$title', '$content')");
+        ('$userID', 1, '$tag', '$title', '$content')");
 	       return $new;
     }
     
@@ -73,12 +83,13 @@ class PostsController extends Controller
 	//create a new IMAGEpost
     //post metodi api/posts/image
 	public function createImage(Request $request) {
+         $userID = $this->getCorrectID();
         $data = $request->all();
        $image = $data['image'];
        $tag = $data['tag'];
        
         
-    $new = DB::select("INSERT INTO posts (userID, postType, pictureURL, tag, title, content) VALUES (3, 2, '$image', '$tag', ' ', ' ')");
+    $new = DB::select("INSERT INTO posts (userID, postType, pictureURL, tag, title, content) VALUES ('$userID', 2, '$image', '$tag', ' ', ' ')");
    //  return $image;
 	     return $new;
     
