@@ -1,6 +1,6 @@
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-# Uusi veispuuk, projektidokumentaatio (TTMMS-0700)
+# Uusi veispuuk, projektidokumentaatio (TTMS-0700)
 
 ## Yleistä
 
