@@ -6,7 +6,16 @@
 
 ### Kuvaus
 
-Työn tavoitteena oli tuottaa toimiva "RESTfull" web-sovellus käyttäen Linux, MySql, Laravel, React sekä bootstrap -tekniikoita.
+Projektin tarkoituksena oli luoda Facebookin alkuperäisen vision mukainen ohjelma, jolla voidaan koulun eri kampusten välillä pitää yhteyttä. Käyttäjät voivat rekisteröityä ohjelmaan käyttämällä jamk.fi tai student.jamk.fi- loppuista sähköpostiosoitetta. 
+
+Käyttäjät voivat luoda palveluun oman profiilin, josta näkyy heidän oma koulutusalansa, sekä nimensä ja profiilikuvansa. Käyttäjät voivat luoda palveluun postauksia, sekä lähettää omia kuviaan. Kuvat ja tekstiketjut ”tägätään” erilaisilla tunnisteilla, joita voidaan hyödyntää viestien lajittelussa. Muut käyttäjät voivat kommentoida toisten käyttäjien tekemiä postauksia, sekä kuvia. 
+
+Käyttäjä voi lajitella ja järjestää etusivulla olevia postauksia annettujen parametrien mukaan. 
+
+Ryhmän jokaisella jäsenellä on kehitysvaiheessa oma virtuaalikone, jolla olevalla palvelimella sovellus pyörii. Jokaiselle kehittäjällä on myös oma tietokanta. Projektin lopuksi koko projekti siirretään toimimaan Digital Ocean- palveluun, jossa se on julkisesti kaikkien nähtävillä.
+
+
+
 
 #### Tekijät 
 
