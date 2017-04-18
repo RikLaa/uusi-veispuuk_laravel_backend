@@ -51,7 +51,7 @@ Sovelluksen fronted toimii React -sekä bootstrap -tekniikoiden päällä. Front
 #### jQuery
 
 
-<a href="http://95.85.60.165:3000/">Uusi Veispuuk</a>
+<a href="http://95.85.60.165:3000/">Uusi Veispuuk</a><br>
 <a href="https://docs.google.com/spreadsheets/d/1c-QAy97tZpHoKPR0I1-kBhpYYMcJx3SPVtewuVP4whU/edit?usp=sharing">Resurssitaulukko</a>
 
 
