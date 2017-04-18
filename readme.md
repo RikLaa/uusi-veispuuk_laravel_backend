@@ -96,6 +96,26 @@ Posts
 +------------+------------------+------+-----+-------------------+----------------+
 </pre>
 
+Comments
+
+<pre>
++------------+------------------+------+-----+-------------------+----------------+
+| Field      | Type             | Null | Key | Default           | Extra          |
++------------+------------------+------+-----+-------------------+----------------+
+| commentID  | int(10) unsigned | NO   | PRI | NULL              | auto_increment |
++------------+------------------+------+-----+-------------------+----------------+
+| postID     | int(10) unsigned | NO   | MUL | NULL              |                |
++------------+------------------+------+-----+-------------------+----------------+
+| userID     | int(10) unsigned | NO   | MUL | NULL              |                |
++------------+------------------+------+-----+-------------------+----------------+
+| content    | varchar(3000)    | NO   |     |                   |                |
++------------+------------------+------+-----+-------------------+----------------+
+| created_at | timestamp        | NO   |     | CURRENT_TIMESTAMP |                |
++------------+------------------+------+-----+-------------------+----------------+
+| updated_at | timestamp        | NO   |     | CURRENT_TIMESTAMP |                |
++------------+------------------+------+-----+-------------------+----------------+
+</pre>
+
 
 
 ## Frontend
@@ -108,7 +128,21 @@ Sovelluksen fronted toimii React -sekä bootstrap -tekniikoiden päällä. Front
 #### React
 #### Bootstrap
 #### jQuery
+### Axios
 
+## Production/Development
+
+Sovelluksen julkaistu versio on näkyvillä osoitteessa: <a href="http://95.85.60.165">Uusi Veispuuk</a>
+Julkaistu versio pyörii Digital Oceanin dropletissa, joka on itse configuroitu manuaalisesti meidän sovelluksen tarpeisiin.
+
+Kehittämiseen käytettiin Virtualboxissa pyörivää virtuaalikonetta (ubuntu server 16.04.02 LTS). Tämä virtuaalikone on myös konfiguroitu melkein identtisesti vastamaan meidän production -serveriämme. Näin ollen, pystyimme päivittämään myös production serverin pelkällä "git pull" komennolla, koska development- sekä production ympäristöt olivat melkein identtiset.
+
+GIT:tiä (CLI ja GUI) käytettiin versionhallintaan, GitHub toimi remote repositoryna. Yhteys virtuaalikoneeseen otettiin SSH:n avulla joko Putty:lla tai suoraan komentoriviltä. MySql -tietokannan hallinnointiin käytettiin pääasiassa CLI-sovellusta. 
+
+Virtuaalikoneessa käytettiin komentorivin käytön apuna tmux (terminal multiplexer) apuohjelmaa, jolla voidaan luoda virtuaalisia päätteitä komentoriviltä.
+
+
+## Resurssit
 
 
 
