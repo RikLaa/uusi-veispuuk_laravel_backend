@@ -40,7 +40,58 @@ Sovelluksen backend toimii Ubuntu 16.04.02 LTS palvelimen päällä, hyödyntäe
 ### Tekniikat
 
 #### Laravel
-#### PHP
+
+##### REST API dokumentaatio
+
+Jokaisessa sovelluksen URL-polussa on alkuliite "api/".
+
+<pre>
++----------------------+-----------------------------------+
+| Otsikko              | Hae kaikki/uusimmat postaukset    |
++----------------------+-----------------------------------+
+| URL                  | /posts                            |
++----------------------+-----------------------------------+
+| Metodi               | GET                               |
++----------------------+-----------------------------------+
+| URL Parametrit       |                                   |
++----------------------+-----------------------------------+
+| Data Parametrit      |                                   |
++----------------------+-----------------------------------+
+| Onnistunut Vastaus   | {                                 |
+|                      |    {                              |
+|                      |                                   |
+|                      |     postID: 1                     |
+|                      |     userID: 1,                    |
+|                      |     title: Eka postaus!,          |
+|                      |     content: Aika jännää!!        |
+|                      |     comments: [                   |
+|                      |         {                         |
+|                      |           commentID: 1,           |
+|                      |           userID: 3,              |
+|                      |           content: Mielestäni...  |
+|                      |         },                        |
+|                      |         {...}                     |
+|                      |       ]                           |
+|                      |     },                            |
+|                      |     {...},                        |
+|                      |     {...}                         |
+|                      | }                                 |
++----------------------+-----------------------------------+
+| Virheellinen Vastaus | Internal server error: 500        |
++----------------------+-----------------------------------+
+| Esimerkkikutsu       | axios.get('/api/posts')           |
+|                      |     .then( (response) => {        |
+|                      |         this.setState({           |
+|                      |             posts: response.data, |
+|                      |             loading: 1            |
+|                      |         })                        |
+|                      |     })                            |
+|                      |                                   |
++----------------------+-----------------------------------+
+| Muuta                |                                   |
++----------------------+-----------------------------------+
+</pre>
+
 #### MySql
 
 Tietokannan rakenne
