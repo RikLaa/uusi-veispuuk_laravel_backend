@@ -7,9 +7,22 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    public function getCorrectID() {
+        $sessionEmail = session('email');
+         $userID = DB::select("select userID
+        from users where email = '$sessionEmail' "); 
+        return $userID[0]->userID;      
+    }
+    
+    
+    
+    
     //yhden käyttäjän kaikki postaukset
-    public function index() {
-{       $posts = DB::select('select * from posts where userID = 3  ORDER BY postID DESC LIMIT 6');
+    public function index() 
+{      
+        $userID = $this->getCorrectID();
+       $posts = DB::select('select * from posts where userID = '.$userID.'  ORDER BY postID DESC LIMIT 6'); 
+         //$posts =  DB::select('select * from posts where userID = 3  ORDER BY postID DESC LIMIT 6');
         $comments = DB::select('select * from comments');
 
         $allPosts = array();
@@ -33,12 +46,13 @@ class UserController extends Controller
        return $allPosts;
     }
         
-	}
+
     //show user profile info
     public function show() {
+        $userID = $this->getCorrectID();
 		// return 'here is your one and only user';
         $oneuser = DB::select('select *
-        from users where userID = 5
+        from users where userID = '.$userID.'
         ');
         return $oneuser;
 	}
