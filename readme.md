@@ -248,14 +248,22 @@ jonka parissa työskennellä. Kuitenkin kaikkia autettiin tarvittaessa ja joitak
 ### Borhan Amini
   * Back-end
     * registration
-      * RegistrationController
+      * app/Http/Controllers/RegistrationController.php
     * authenticatation
       * Login
+      	* app/Http/Controllers/SessionsController.php
       * Logout
+      	* app/Http/Controllers/SessionsController.php
     * authenticatation control
-      * middleware
-      * session
-      * routes
+      * middleware(Every api request transfers through the "CheckLogin" middleware in order to check authenticatation)
+      	* app/Http/Middleware/CheckLogin.php
+	* app/Http/Kernel.php
+      * session(Midllware is programmed to check authenticatation based on the unique created session for each user)
+      	* app/Http/Controllers/SessionsController.php
+      * routes(It is implemented by grouping those routes which are required to check authenticatation under CheckLogin middleware)
+      	* routes/web.php
+		* Route::group(['prefix' => 'api']
+		* Route::group(['middleware' => 'checklogin']
   * front-end
     * retriving user's relevant data into profile page based on the current session
     * fetching user's relevant posts from database based on the current session    
@@ -325,7 +333,7 @@ Laravelin rinnalla opin myös git(versio hallinta) ja react.
 Ahkerasti ja innokaasti yritin saada toteuttua minulle määritellyt tehtävät.  
 Meillä on paljon hienoja ajatuksia miten voisimme vielä kehittää projektiamme.  
 Ryhmätyö onnistui erittäin hyvin.  
-Arvosanaksi itselleni antaisin 4
+Arvosanaksi itselleni antaisin 4-5.
 
 ### Jenni Rohunen
 Projekti onnistui mielestäni kokonaisuudessaan hyvin. Saimme toteutettua kaikki haluamamme toiminnot ja missään vaiheessa projektin tekemisessä ei tullut kiire. Toki sovellukseen jäi vielä paljon muuta tekemistä ja toiveissa onkin kehittää se vielä joskus kokonaan valmiiksi.Olin aina paikalla projekti tunneilla ja tein oman osuuteni mielestäni kiitettävästi. Opin todella paljon uutta ja sain ymmärrystä erilaisiin tekniikoihin. Olen tyytyväinen siihen, että käytimme projektissamme paljon tekniikoita joista on varmasti hyötyä työelämässä. Arvosanaksi itselleni antaisin 4.
