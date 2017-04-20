@@ -194,6 +194,24 @@ Virtuaalikoneessa käytettiin komentorivin käytön apuna tmux (terminal multipl
 
 
 ## Resurssit
+## Tehtävät
+* Borhan Amini
+  * Back-end
+    * registration
+      * RegistrationController
+    * authenticatation
+      * Login
+      * Logout
+    * authenticatation control
+      * middleware
+      * session
+      * routes
+  * front-end
+    * retriving user's relevant data into profile page based on the current session
+    * fetching user's relevant posts from database based on the current session
+* Jenni Rohunen
+* Riku Laajala
+## Itsearvio
 
 
 
