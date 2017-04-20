@@ -9,6 +9,13 @@
 <a href="https://docs.google.com/spreadsheets/d/1c-QAy97tZpHoKPR0I1-kBhpYYMcJx3SPVtewuVP4whU/edit?usp=sharing">Resurssitaulukko</a><br>
 <a href="https://github.com/RikLaa/uusi-veispuuk_version_control">Frontend -repositorio</a>
 
+#### Tekijät 
+
+Miikka Sipilä, Borhan Amini, Riku Laajala ja Jenni Rohunen.
+
+#### Päivämäärä
+
+18.4.2017
 
 ### Kuvaus
 
@@ -21,15 +28,6 @@ Käyttäjä voi lajitella ja järjestää etusivulla olevia postauksia annettuje
 Ryhmän jokaisella jäsenellä on kehitysvaiheessa oma virtuaalikone, jolla olevalla palvelimella sovellus pyörii. Jokaiselle kehittäjällä on myös oma tietokanta. Projektin lopuksi koko projekti siirretään toimimaan Digital Ocean- palveluun, jossa se on julkisesti kaikkien nähtävillä.
 
 
-
-
-#### Tekijät 
-
-Miikka Sipilä, Borhan Amini, Riku Laajala ja Jenni Rohunen.
-
-#### Päivämäärä
-
-18.4.2017
 ![kuva](http://student.labranet.jamk.fi/~K2346/graafi.jpg)
 
 ## Backend
