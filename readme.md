@@ -239,7 +239,18 @@ jonka parissa työskennellä.
       * routes
   * front-end
     * retriving user's relevant data into profile page based on the current session
-    * fetching user's relevant posts from database based on the current session
+    * fetching user's relevant posts from database based on the current session  
+// Create new users and send data to database
+// Validating registration data
+// Make hashed password
+// Preparing and Searching submited data in database
+// checking hashed password in database
+// Initiating a session
+// erasing current session in order to loging out
+// Every api request transfers through the "CheckLogin" middleware in order to check authenticatation
+// It is implemented by grouping those routes which are required to check authenticatation under CheckLogin middleware
+// Midllware is programmed to check authenticatation based on the unique created session for each user  
+ 
 ### Jenni Rohunen
 ### Riku Laajala
 ## Itsearvio
