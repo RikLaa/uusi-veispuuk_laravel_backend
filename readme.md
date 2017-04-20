@@ -33,6 +33,7 @@ Miikka Sipilä, Borhan Amini, Riku Laajala ja Jenni Rohunen.
 
 <p align="center"><img src="http://student.labranet.jamk.fi/~K2346/graafi.jpg"></p>
 
+
 ## Backend
 
 Sovelluksen backend toimii Ubuntu 16.04.02 LTS palvelimen päällä, hyödyntäen MySql sekä Laravel (php) -tekniikoita.
