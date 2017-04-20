@@ -246,34 +246,34 @@ Virtuaalikoneessa käytettiin komentorivin käytön apuna tmux (terminal multipl
 Koska projektin front-end puoli oli pääasiassa toteutettu jo syksyllä, keskityttiin nyt back-end puoleen. Jokaiselle kehittäjälle jaettiin oma vastuualue,
 jonka parissa työskennellä. Kuitenkin kaikkia autettiin tarvittaessa ja joitakin ominaisuuksia tehtiin yhdessä.
 ### Borhan Amini
-  * Back-end
+  * **Back-end**
     * registration
-      * app/Http/Controllers/RegistrationController.php
+      * _app/Http/Controllers/RegistrationController.php_
     * authenticatation
       * Login
-      	* app/Http/Controllers/SessionsController.php
+      	* _app/Http/Controllers/SessionsController.php_
       * Logout
-      	* app/Http/Controllers/SessionsController.php
+      	* _app/Http/Controllers/SessionsController.php_
     * authenticatation control
       * middleware(Every api request transfers through the "CheckLogin" middleware in order to check authenticatation)
-      	* app/Http/Middleware/CheckLogin.php
-	* app/Http/Kernel.php
+      	* _app/Http/Middleware/CheckLogin.php_
+	* _app/Http/Kernel.php_
       * session(Midllware is programmed to check authenticatation based on the unique created session for each user)
-      	* app/Http/Controllers/SessionsController.php
+      	* _app/Http/Controllers/SessionsController.php_
       * routes(It is implemented by grouping those routes which are required to check authenticatation under CheckLogin middleware)
       	* routes/web.php
-		* Route::group(['prefix' => 'api']
-		* Route::group(['middleware' => 'checklogin']
-  * front-end
+		* _Route::group(['prefix' => 'api']_
+		* _Route::group(['middleware' => 'checklogin']_
+  * **front-end**
     * retriving user's relevant data into profile page based on the current session
     * fetching user's relevant posts from database based on the current session    
  
 ### Jenni Rohunen
-* Tietokanta
+* **Tietokanta**
 	* MySQL tietokannan luomis syntaksi suunnitelman mukaisesti	
 	* Testidata
 
-* Back-end
+* **Back-end**
     * Tekstipostausten lisääminen tietokantaan
       * PostsController.php (create- funktio)
     * Kuvapostausten lisääminen tietokantaan
@@ -284,7 +284,7 @@ jonka parissa työskennellä. Kuitenkin kaikkia autettiin tarvittaessa ja joitak
       * UserController.php (getCorrectID- ja index- funktiot)
     * Uuden käyttäjän profiilikuvan lisääminen kantaan
     	* RegistrationController.php (create- funktio [pieni osa])
-* Front-end
+* **Front-end**
     * Profiilisivu
       * Profile.jsx, Profileposts.jsx
     * Tekstipostauksen lisääminen
@@ -298,11 +298,11 @@ jonka parissa työskennellä. Kuitenkin kaikkia autettiin tarvittaessa ja joitak
 
 
 ### Riku Laajala
-  * server
+  * **server**
 	   * Dropletin luominen DigitalOceaniin
     * Dropletin sekä virtuaalikoneen konfigurointi
     * Sovellusrakenteen luominen
-  * back-end
+  * **back-end**
     * Postauksien hakeminen
       * PostsController.php (index- funktio kaikkien postauksien hakemiseen)
     * Kommenttien hakeminen/lisääminen
@@ -312,7 +312,7 @@ jonka parissa työskennellä. Kuitenkin kaikkia autettiin tarvittaessa ja joitak
     * Autentikointi			
       * SessionController.php (login/logout toiminnallisuuden tekeminen)
        * CheckLogin.php -middleware
-  * front-end
+  * **front-end**
     * Kaikkien postauksien hakeminen
       * Container.jsx
     * Haku- toiminnon toteutus
