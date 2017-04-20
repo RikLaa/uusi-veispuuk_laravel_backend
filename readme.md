@@ -30,9 +30,7 @@ Miikka Sipilä, Borhan Amini, Riku Laajala ja Jenni Rohunen.
 #### Päivämäärä
 
 18.4.2017
-
-<img src="http://student.labranet.jamk.fi/~K2346/graafi.jpg">
-
+![kuva](http://student.labranet.jamk.fi/~K2346/graafi.jpg)
 
 ## Backend
 
