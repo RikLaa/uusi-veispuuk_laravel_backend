@@ -31,7 +31,7 @@ Miikka Sipilä, Borhan Amini, Riku Laajala ja Jenni Rohunen.
 
 18.4.2017
 
-
+<p align="center"><img src="http://student.labranet.jamk.fi/~K2346/graafi.jpg"></p>
 
 ## Backend
 
@@ -224,6 +224,8 @@ Virtuaalikoneessa käytettiin komentorivin käytön apuna tmux (terminal multipl
 
 
 ## Resurssit
+
+
 ## Tehtävät
 Koska projektin frontend puoli oli pääasiassa toteutettu jo syksyllä, keskityttiin nyt backend puoleen. Jokaiselle kehittäjälle jaettiin oma vastuualue,
 jonka parissa työskennellä. 
@@ -244,13 +246,13 @@ jonka parissa työskennellä.
 * Jenni Rohunen
 * Riku Laajala
 ## Itsearvio
-* Borhan Amini
+### Borhan Amini
 
-* Jenni Rohunen
+### Jenni Rohunen
 Projekti onnistui mielestäni kokonaisuudessaan hyvin. Saimme toteutettua kaikki haluamamme toiminnot ja missään vaiheessa projektin tekemisessä ei tullut kiire. Toki sovellukseen jäi vielä paljon muuta tekemistä ja toiveissa onkin kehittää se vielä joskus kokonaan valmiiksi.Olin aina paikalla projekti tunneilla ja tein oman osuuteni mielestäni kiitettävästi. Opin todella paljon uutta ja sain ymmärrystä erilaisiin tekniikoihin. Olen tyytyväinen siihen, että käytimme projektissamme paljon tekniikoita joista on varmasti hyötyä työelämässä. Arvosanaksi itselleni antaisin 4.
 
 
-* Riku Laajala
+### Riku Laajala
 
 
 
