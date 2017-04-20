@@ -92,6 +92,36 @@ Jokaisessa sovelluksen URL-polussa on alkuliite "api/".
 +----------------------+-----------------------------------+
 </pre>
 
+<pre>
++----------------------+-----------------------------------+
+| Otsikko              | Kuvapostauksen lisääminen         |
++----------------------+-----------------------------------+
+| URL                  | /posts/image                      |
++----------------------+-----------------------------------+
+| Metodi               | POST                              |
++----------------------+-----------------------------------+
+| URL Parametrit       |                                   |
++----------------------+-----------------------------------+
+| Data Parametrit      | image, tag                        |
++----------------------+-----------------------------------+
+| Onnistunut Vastaus   |  []                               |
++----------------------+-----------------------------------+
+| Virheellinen Vastaus | Internal server error: 500        |
++----------------------+-----------------------------------+
+| Esimerkkikutsu       |  $.ajax({                         |
+|                      |   method: 'post',                 |
+|                      |   url: '/api/posts/image',        |
+|                      |   data: {                         |
+|                      |           image: image,           |
+|                      |           tag: tag                |
+|                      |         }                         |
+|                      |     })                            |
+|                      |                                   |
++----------------------+-----------------------------------+
+| Muuta                |                                   |
++----------------------+-----------------------------------+
+</pre>
+
 #### MySql
 
 Tietokannan rakenne
@@ -195,6 +225,8 @@ Virtuaalikoneessa käytettiin komentorivin käytön apuna tmux (terminal multipl
 
 ## Resurssit
 ## Tehtävät
+Koska projektin frontend puoli oli pääasiassa toteutettu jo syksyllä, keskityttiin nyt backend puoleen. Jokaiselle kehittäjälle jaettiin oma vastuualue,
+jonka parissa työskennellä. 
 * Borhan Amini
   * Back-end
     * registration
@@ -212,6 +244,13 @@ Virtuaalikoneessa käytettiin komentorivin käytön apuna tmux (terminal multipl
 * Jenni Rohunen
 * Riku Laajala
 ## Itsearvio
+* Borhan Amini
+
+* Jenni Rohunen
+Projekti onnistui mielestäni kokonaisuudessaan hyvin. Saimme toteutettua kaikki haluamamme toiminnot ja missään vaiheessa projektin tekemisessä ei tullut kiire. Toki sovellukseen jäi vielä paljon muuta tekemistä ja toiveissa onkin kehittää se vielä joskus kokonaan valmiiksi.Olin aina paikalla projekti tunneilla ja tein oman osuuteni mielestäni kiitettävästi. Opin todella paljon uutta ja sain ymmärrystä erilaisiin tekniikoihin. Olen tyytyväinen siihen, että käytimme projektissamme paljon tekniikoita joista on varmasti hyötyä työelämässä. Arvosanaksi itselleni antaisin 4.
+
+
+* Riku Laajala
 
 
 
