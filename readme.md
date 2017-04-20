@@ -27,12 +27,12 @@ Käyttäjä voi lajitella ja järjestää etusivulla olevia postauksia annettuje
 
 Ryhmän jokaisella jäsenellä on kehitysvaiheessa oma virtuaalikone, jolla olevalla palvelimella sovellus pyörii. Jokaiselle kehittäjällä on myös oma tietokanta. Projektin lopuksi koko projekti siirretään toimimaan Digital Ocean- palveluun, jossa se on julkisesti kaikkien nähtävillä.
 
-
+<p align="center"><img src="http://student.labranet.jamk.fi/~K2346/graafi.jpg"></p>
 ![kuva](http://student.labranet.jamk.fi/~K2346/graafi.jpg)
 
 ## Backend
 
-Sovelluksen backend toimii Ubuntu 16.04.02 LTS palvelimen päällä, hyödyntäen MySql sekä Laravel (php) -tekniikoita.
+Sovelluksen backend toimii REST API:na Ubuntu 16.04.02 LTS palvelimen päällä, hyödyntäen MySql sekä Laravel (php) -tekniikoita.
 
 ### Tekniikat
 
@@ -88,6 +88,12 @@ Jokaisessa sovelluksen URL-polussa on alkuliite "api/".
 | Muuta                |                                   |
 +----------------------+-----------------------------------+
 </pre>
+Ylläoleva tiedostoissa: 
+<a href="https://github.com/RikLaa/uusi-veispuuk_laravel_backend/blob/master/app/Http/Controllers/PostsController.php">Backend -tiedosto</a>, 
+<a href="https://github.com/RikLaa/uusi-veispuuk_version_control/blob/master/uusi-veispuuk-react-app/src/scene/Home/Container.jsx">Frontend -tiedosto</a>
+
+<br>
+<br>
 
 <pre>
 +----------------------+-----------------------------------+
@@ -118,12 +124,22 @@ Jokaisessa sovelluksen URL-polussa on alkuliite "api/".
 | Muuta                |                                   |
 +----------------------+-----------------------------------+
 </pre>
+Ylläoleva tiedostoissa: 
+<a href="https://github.com/RikLaa/uusi-veispuuk_laravel_backend/blob/master/app/Http/Controllers/PostsController.php">Backend -tiedosto</a>, 
+<a href="https://github.com/RikLaa/uusi-veispuuk_version_control/blob/master/uusi-veispuuk-react-app/src/scene/Home/NavBarModals/AddPictureModal.jsx">Frontend -tiedosto</a>
+
+<br>
+<br>
 
 #### MySql
 
+Käytimme tietokantojen luomiseen Laravelin artisan työkalua. (php artisan migrate).
+<br>
+<a href="https://github.com/RikLaa/uusi-veispuuk_laravel_backend/tree/master/database/migrations">Migraatiotiedostot</a>
+
 Tietokannan rakenne
 
-Users
+**User**
 <pre>
 +------------+------------------+------+-----+---------+----------------+
 | Field      | Type             | Null | Key | Default | Extra          |
@@ -148,7 +164,7 @@ Users
 +------------+------------------+------+-----+---------+----------------+
 </pre>
 
-Posts
+**Posts**
 
 <pre>
 +------------+------------------+------+-----+-------------------+----------------+
@@ -174,7 +190,7 @@ Posts
 +------------+------------------+------+-----+-------------------+----------------+
 </pre>
 
-Comments
+**Comments**
 
 <pre>
 +------------+------------------+------+-----+-------------------+----------------+
@@ -200,13 +216,15 @@ Comments
 
 Sovelluksen fronted toimii React -sekä bootstrap -tekniikoiden päällä. Frontendistä on tehty erillinen git-repositorio ja näin ollen se toimii siis kokonaan erillään tästä backend-repositoriosta.
 
+Frontend-sovellus tekee ajax-kutsuja backendille (kuten ylläolevassa api-dokumentaatiossa on kuvattu).
+
 <a href="https://github.com/RikLaa/uusi-veispuuk_version_control">Frontend -repositorio</a>
 
 ### Tekniikat
-#### React
-#### Bootstrap
-#### jQuery
-### Axios
+- React
+- Bootstrap
+- jQuery
+- Axios
 
 ## Production/Development
 
@@ -221,7 +239,7 @@ Virtuaalikoneessa käytettiin komentorivin käytön apuna tmux (terminal multipl
 
 
 ## Resurssit
-
+<a href="https://docs.google.com/spreadsheets/d/1c-QAy97tZpHoKPR0I1-kBhpYYMcJx3SPVtewuVP4whU/edit?usp=sharing">Resurssitaulukko</a><br>
 
 ## Tehtävät
 Koska projektin frontend puoli oli pääasiassa toteutettu jo syksyllä, keskityttiin nyt backend puoleen. Jokaiselle kehittäjälle jaettiin oma vastuualue,
@@ -243,6 +261,33 @@ jonka parissa työskennellä.
  
 ### Jenni Rohunen
 ### Riku Laajala
+  * server
+	   * Dropletin luominen DigitalOceaniin
+    * Dropletin sekä virtuaalikoneen konfigurointi
+    * Sovellusrakenteen luominen
+  * back-end
+    * Postauksien hakeminen
+      * PostsController.php (index- funktio kaikkien postauksien hakemiseen)
+    * Kommenttien hakeminen/lisääminen
+      * CommentsController.php
+    * Haku
+      * SearchController.php
+    * Autentikointi			
+      * SessionController.php (login/logout toiminnallisuuden tekeminen)
+       * CheckLogin.php -middleware
+  * front-end
+    * Kaikkien postauksien hakeminen
+      * Container.jsx
+    * Haku- toiminnon toteutus
+      * Navbar.jsx 
+    * Kommenttien lisääminen
+      * Post.jsx	
+    * Autentikointi
+      * Login.jsx
+    * Rekisteröinti
+      * Registration.jsx
+
+
 ## Itsearvio
 ### Borhan Amini
 Vaikka alussa tuntui raskaalta oppia uusi framework ja jouduin ensimmäistä kaksi viikkoa lukemaan ja oppimaan laravelin mutta nyt olen aivan tyytyväinen
@@ -258,6 +303,13 @@ Projekti onnistui mielestäni kokonaisuudessaan hyvin. Saimme toteutettua kaikki
 
 
 ### Riku Laajala
+Olen hyvin tyytyväinen ryhmään sekä projektiin. Saimme oikeastaan kaikki tärkeimmät toiminnot toteutettua eikä meillä tullut edes kiire loppua kohden. 
+Aikaa meni aluksi tosi paljon uusien asioiden opetteluun sekä testaamiseen mutta mitä enemmän aikaa kului, sitä nopeammaksi kehitystyö tuli. Veikkaisin että jos aikaa
+olisi ollut pari viikkoa enemmän, olisi sovellus paljon kokonaisempi. Hauskinta oli oppia uutta sekä tutustua uusiin tapoihin rakentaa tällaisia web-sovelluksia. 
 
+Mitä enemmän oppii asioita, sitä enemmän alkaa huomata että miten paljon on vielä opittavaa.
+Vaikeinta oli löytää miten eri tekniikat toimivat yhdessä sekä millainen rakenne tällaisella "isommalla" 
+sovelluksella tulisi olla. Tämän takia aikaa kului paljon myös palvelimen/virtuaalikoneen konfigurointiin mutta nyt ainakin koen komentorivillä työskentelyn nopeaksi sekä aika mielekkääksi.
+Arvosanaksi itselleni antaisin 4-5.
 
 
