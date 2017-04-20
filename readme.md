@@ -244,6 +244,12 @@ jonka parissa työskennellä.
 * Riku Laajala
 ## Itsearvio
 ### Borhan Amini
+Vaikka alussa tuntui raskaalta oppia uusi framework ja jouduin ensimmäistä kaksi viikkoa lukemaan ja oppimaan laravelin mutta nyt olen aivan tyytyväinen
+ja olen varma että tästä on tulevaisuudessa hyötyä työelämässä
+Laravelin rinnalla opin myös git(versio hallinta) ja react. Ahkerasti ja innokaasti yritin saada toteuttua minulle määritellyt tehtävät.
+Meillä on paljon hienoja ajatuksia miten voisimme vielä kehittää projektiamme
+Ryhmätyö onnistui erittäin hyvin.
+Arvosanaksi itselleni antaisin 4
 
 ### Jenni Rohunen
 Projekti onnistui mielestäni kokonaisuudessaan hyvin. Saimme toteutettua kaikki haluamamme toiminnot ja missään vaiheessa projektin tekemisessä ei tullut kiire. Toki sovellukseen jäi vielä paljon muuta tekemistä ja toiveissa onkin kehittää se vielä joskus kokonaan valmiiksi.Olin aina paikalla projekti tunneilla ja tein oman osuuteni mielestäni kiitettävästi. Opin todella paljon uutta ja sain ymmärrystä erilaisiin tekniikoihin. Olen tyytyväinen siihen, että käytimme projektissamme paljon tekniikoita joista on varmasti hyötyä työelämässä. Arvosanaksi itselleni antaisin 4.
