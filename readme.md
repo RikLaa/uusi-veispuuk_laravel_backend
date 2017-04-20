@@ -35,10 +35,12 @@ Ryhmän jokaisella jäsenellä on kehitysvaiheessa oma virtuaalikone, jolla olev
 Sovelluksen backend toimii REST API:na Ubuntu 16.04.02 LTS palvelimen päällä, hyödyntäen MySql sekä Laravel (php) -tekniikoita.
 
 ### Tekniikat
+- Laravel
+- MySql
+- Ubuntu server 16.04.02 LTS
 
-#### Laravel
-
-##### REST API dokumentaatio
+### Laravel
+#### REST API dokumentaatio
 
 Jokaisessa sovelluksen URL-polussa on alkuliite "api/".
 
@@ -131,7 +133,7 @@ Ylläoleva tiedostoissa:
 <br>
 <br>
 
-#### MySql
+### MySql- tietokanta
 
 Käytimme tietokantojen luomiseen Laravelin artisan työkalua. (php artisan migrate).
 <br>
