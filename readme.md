@@ -27,8 +27,7 @@ Käyttäjä voi lajitella ja järjestää etusivulla olevia postauksia annettuje
 
 Ryhmän jokaisella jäsenellä on kehitysvaiheessa oma virtuaalikone, jolla olevalla palvelimella sovellus pyörii. Jokaiselle kehittäjällä on myös oma tietokanta. Projektin lopuksi koko projekti siirretään toimimaan Digital Ocean- palveluun, jossa se on julkisesti kaikkien nähtävillä.
 
-<p align="center"><img src="http://student.labranet.jamk.fi/~K2346/graafi.jpg"></p>
-![kuva](http://student.labranet.jamk.fi/~K2346/graafi.jpg)
+![graafi](https://cloud.githubusercontent.com/assets/16792394/25243542/0ca63396-2606-11e7-9b91-190e58b55f75.jpg)
 
 ## Backend
 
@@ -244,8 +243,8 @@ Virtuaalikoneessa käytettiin komentorivin käytön apuna tmux (terminal multipl
 <a href="https://docs.google.com/spreadsheets/d/1c-QAy97tZpHoKPR0I1-kBhpYYMcJx3SPVtewuVP4whU/edit?usp=sharing">Resurssitaulukko</a><br>
 
 ## Tehtävät
-Koska projektin frontend puoli oli pääasiassa toteutettu jo syksyllä, keskityttiin nyt backend puoleen. Jokaiselle kehittäjälle jaettiin oma vastuualue,
-jonka parissa työskennellä. 
+Koska projektin front-end puoli oli pääasiassa toteutettu jo syksyllä, keskityttiin nyt back-end puoleen. Jokaiselle kehittäjälle jaettiin oma vastuualue,
+jonka parissa työskennellä. Kuitenkin kaikkia autettiin tarvittaessa ja joitakin ominaisuuksia tehtiin yhdessä.
 ### Borhan Amini
   * Back-end
     * registration
@@ -262,6 +261,33 @@ jonka parissa työskennellä.
     * fetching user's relevant posts from database based on the current session    
  
 ### Jenni Rohunen
+* Tietokanta
+	* MySQL tietokannan luomis syntaksi suunnitelman mukaisesti	
+
+* Back-end
+    * Teksti postausten lisääminen tietokantaan
+      * PostsController.php (create- funktio)
+    * Kuva postausten lisääminen tietokantaan
+      * PostsController.php (createImage- funktio)
+    * Kirjautuneen käyttäjän tietojen hakeminen tietokannasta
+      * UserController.php (getCorrectID- ja show- funktiot)
+    * Kirjautuneen käyttäjän postausten hakeminen tietokannasta         
+      * UserController.php (getCorrectID- ja index- funktiot)
+    * Uuden käyttäjän profiilikuvan lisääminen kantaan
+    	* RegistrationController.php (create- funktio [pieni osa])
+* Front-end
+    * Profiilisivu
+      * Profile.jsx, Profileposts.jsx
+    * Teksti postauksen lisääminen
+      * AddPostModal.jsx
+    * Kuva postauksen lisääminen
+      * AddPictureModal.jsx
+    * Kuvapostausten renderointi
+      * Posts.jsx
+    * Kirjautuneen käyttäjän nimi navbariin
+      * NavBar.jsx
+
+
 ### Riku Laajala
   * server
 	   * Dropletin luominen DigitalOceaniin
