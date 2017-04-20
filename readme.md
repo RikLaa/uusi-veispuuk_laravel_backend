@@ -262,8 +262,8 @@ jonka parissa työskennellä. Kuitenkin kaikkia autettiin tarvittaessa ja joitak
       	* _app/Http/Controllers/SessionsController.php_
       * routes (It is implemented by grouping those routes which are required to check authenticatation under CheckLogin middleware)
       	* routes/web.php
-		* _Route::group(['prefix' => 'api']_
-		* _Route::group(['middleware' => 'checklogin']_
+			* _Route::group(['prefix' => 'api']_
+			* _Route::group(['middleware' => 'checklogin']_
   * **front-end**
     * retriving user's relevant data into profile page based on the current session
     * fetching user's relevant posts from database based on the current session    
