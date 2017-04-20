@@ -226,7 +226,7 @@ Virtuaalikoneessa käytettiin komentorivin käytön apuna tmux (terminal multipl
 ## Tehtävät
 Koska projektin frontend puoli oli pääasiassa toteutettu jo syksyllä, keskityttiin nyt backend puoleen. Jokaiselle kehittäjälle jaettiin oma vastuualue,
 jonka parissa työskennellä. 
-* Borhan Amini
+### Borhan Amini
   * Back-end
     * registration
       * RegistrationController
