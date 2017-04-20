@@ -263,11 +263,12 @@ jonka parissa työskennellä. Kuitenkin kaikkia autettiin tarvittaessa ja joitak
 ### Jenni Rohunen
 * Tietokanta
 	* MySQL tietokannan luomis syntaksi suunnitelman mukaisesti	
+	* Testidata
 
 * Back-end
-    * Teksti postausten lisääminen tietokantaan
+    * Tekstipostausten lisääminen tietokantaan
       * PostsController.php (create- funktio)
-    * Kuva postausten lisääminen tietokantaan
+    * Kuvapostausten lisääminen tietokantaan
       * PostsController.php (createImage- funktio)
     * Kirjautuneen käyttäjän tietojen hakeminen tietokannasta
       * UserController.php (getCorrectID- ja show- funktiot)
@@ -278,9 +279,9 @@ jonka parissa työskennellä. Kuitenkin kaikkia autettiin tarvittaessa ja joitak
 * Front-end
     * Profiilisivu
       * Profile.jsx, Profileposts.jsx
-    * Teksti postauksen lisääminen
+    * Tekstipostauksen lisääminen
       * AddPostModal.jsx
-    * Kuva postauksen lisääminen
+    * Kuvapostauksen lisääminen
       * AddPictureModal.jsx
     * Kuvapostausten renderointi
       * Posts.jsx
