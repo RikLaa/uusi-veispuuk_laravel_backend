@@ -245,10 +245,11 @@ jonka parissa työskennellä.
 ## Itsearvio
 ### Borhan Amini
 Vaikka alussa tuntui raskaalta oppia uusi framework ja jouduin ensimmäistä kaksi viikkoa lukemaan ja oppimaan laravelin mutta nyt olen aivan tyytyväinen
-ja olen varma että tästä on tulevaisuudessa hyötyä työelämässä
-Laravelin rinnalla opin myös git(versio hallinta) ja react. Ahkerasti ja innokaasti yritin saada toteuttua minulle määritellyt tehtävät.
-Meillä on paljon hienoja ajatuksia miten voisimme vielä kehittää projektiamme
-Ryhmätyö onnistui erittäin hyvin.
+ja olen varma että tästä on tulevaisuudessa hyötyä työelämässä.  
+Laravelin rinnalla opin myös git(versio hallinta) ja react.  
+Ahkerasti ja innokaasti yritin saada toteuttua minulle määritellyt tehtävät.  
+Meillä on paljon hienoja ajatuksia miten voisimme vielä kehittää projektiamme.  
+Ryhmätyö onnistui erittäin hyvin.  
 Arvosanaksi itselleni antaisin 4
 
 ### Jenni Rohunen
