@@ -240,8 +240,8 @@ jonka parissa työskennellä.
   * front-end
     * retriving user's relevant data into profile page based on the current session
     * fetching user's relevant posts from database based on the current session
-* Jenni Rohunen
-* Riku Laajala
+### Jenni Rohunen
+### Riku Laajala
 ## Itsearvio
 ### Borhan Amini
 Vaikka alussa tuntui raskaalta oppia uusi framework ja jouduin ensimmäistä kaksi viikkoa lukemaan ja oppimaan laravelin mutta nyt olen aivan tyytyväinen
