@@ -257,7 +257,7 @@ jonka parissa työskennellä. Kuitenkin kaikkia autettiin tarvittaessa ja joitak
     * **authenticatation control**
       * middleware(Every api request transfers through the "CheckLogin" middleware in order to check authenticatation)
       	* _app/Http/Middleware/CheckLogin.php_
-	* _app/Http/Kernel.php_
+		* _app/Http/Kernel.php_
       * session (Midllware is programmed to check authenticatation based on the unique created session for each user)
       	* _app/Http/Controllers/SessionsController.php_
       * routes (It is implemented by grouping those routes which are required to check authenticatation under CheckLogin middleware)
